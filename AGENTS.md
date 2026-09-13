@@ -7,7 +7,7 @@
 
 File Centipede (filecxx.com) public repository: the static website, translation sources, release artifacts, and partial desktop-app source.
 
-- Git: `origin` = `https://github.com/vendoriaai/FileCentipede` (user's fork); upstream = `https://github.com/filecxx/FileCentipede`. `main` stays synced to upstream; contribution work happens on feature branches and is upstreamed via PRs from the fork. `commit.sh`, `update.sh`, and `certbot.sh` target the original author's GitHub repo and web server — do not run them against the fork
+- Git: `origin` = `https://github.com/vendoriaai/FileCentipede` (user's fork); upstream = `https://github.com/filecxx/FileCentipede`. Fork `main` carries the fork's additions (DOX docs, `themes/`); upstream contributions are filed from dedicated clean branches built on upstream `main` (e.g. `upstream-pr` — no DOX files, rebased onto upstream when it moves). `commit.sh`, `update.sh`, and `certbot.sh` target the original author's GitHub repo and web server — do not run them against the fork
 
 - Website: `tpl/` is the master template (`${key}` placeholders + `${@import ...}` includes); the locale folders `de_DE/ en_US/ id_ID/ ko_KR/ ru_RU/ tr_TR/ zh_CN/ zh_TW/` are generated renders — edit `tpl/` plus `lang/website/`, never hand-edit locale folders
 - Translations: `lang/` holds the only string sources — `website/*.lang`, `software/*.lang` (key=value; keys ending in `_` may contain HTML), `browser_extension/<locale>/messages.json`
